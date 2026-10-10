@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101820">
+  <title>Standard Printers | AR Visiting Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <div id="camera-status" class="status">Standard Printers · Digital Visiting Card</div>
+    <section id="intro" class="intro">
+      <div class="brand-mark">SP</div>
+      <p class="eyebrow">STANDARD PRINTERS</p>
+      <h1>Your visiting card,<br><span>in augmented reality.</span></h1>
+      <p class="sub">Place a floating digital card in your space and open the company website.</p>
+      <button id="start-ar" class="primary">Start AR Experience</button>
+      <a class="secondary" href="https://www.standardprinters.co.in/" target="_blank" rel="noopener">Open website directly ↗</a>
+      <p id="compat" class="fine">For the best AR experience, open this page on a supported Android phone in Chrome over HTTPS.</p>
+    </section>
+    <section id="fallback-card" class="fallback-card" hidden>
+      <div class="card-top"><div class="mini-logo">SP</div><span>PRINTING • PACKAGING • SOLUTIONS</span></div>
+      <h2>STANDARD<br>PRINTERS</h2>
+      <div class="accent"></div>
+      <p>Ideas made visible.</p>
+      <a href="https://www.standardprinters.co.in/" target="_blank" rel="noopener">VISIT WEBSITE ↗</a>
+      <small>Tap the link to explore our website</small>
+    </section>
+    <div id="ar-help" hidden>Move your phone slowly to find a surface, then tap to place the card.</div>
+    <button id="exit-ar" class="exit" hidden>Exit AR</button>
+    <div id="error" role="status" hidden></div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
