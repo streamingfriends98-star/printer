@@ -24,13 +24,3 @@ IMPORTANT:
 3. The QR placeholder must be regenerated to point to the final hosted HTTPS page.
 4. This version shows a live camera video behind a transparent carousel, not spatially anchored WebXR AR.
 5. Service/contact copy should be checked against the current company website before printing.
-
-ANIMATION UPDATE
-- Animated cinematic card reveal on page opening and each slide change.
-- Staggered logo, headings, service list, contact details and CTA text entrances.
-- Gold underline sweep, subtle live indicator pulse, and button micro-interactions.
-- Honors the device's reduced-motion accessibility preference.
-
-NAVIGATION UPDATE
-- Previous/next chevron arrows are positioned at the left and right sides of the card itself.
-- Bottom row now contains only the slide dots and swipe hint.
