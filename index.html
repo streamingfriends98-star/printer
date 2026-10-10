@@ -1,36 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta name="theme-color" content="#101820">
-  <title>Standard Printers | AR Visiting Card</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101820"><title>Standard Printers — Live Camera Card</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main id="app">
-    <div id="camera-status" class="status">Standard Printers · Digital Visiting Card</div>
-    <section id="intro" class="intro">
-      <div class="brand-mark">SP</div>
-      <p class="eyebrow">STANDARD PRINTERS</p>
-      <h1>Your visiting card,<br><span>in augmented reality.</span></h1>
-      <p class="sub">Place a floating digital card in your space and open the company website.</p>
-      <button id="start-ar" class="primary">Start AR Experience</button>
-      <a class="secondary" href="https://www.standardprinters.co.in/" target="_blank" rel="noopener">Open website directly ↗</a>
-      <p id="compat" class="fine">For the best AR experience, open this page on a supported Android phone in Chrome over HTTPS.</p>
-    </section>
-    <section id="fallback-card" class="fallback-card" hidden>
-      <div class="card-top"><div class="mini-logo">SP</div><span>PRINTING • PACKAGING • SOLUTIONS</span></div>
-      <h2>STANDARD<br>PRINTERS</h2>
-      <div class="accent"></div>
-      <p>Ideas made visible.</p>
-      <a href="https://www.standardprinters.co.in/" target="_blank" rel="noopener">VISIT WEBSITE ↗</a>
-      <small>Tap the link to explore our website</small>
-    </section>
-    <div id="ar-help" hidden>Move your phone slowly to find a surface, then tap to place the card.</div>
-    <button id="exit-ar" class="exit" hidden>Exit AR</button>
-    <div id="error" role="status" hidden></div>
-  </main>
-  <script type="module" src="app.js"></script>
-</body>
-</html>
+<main id="app">
+  <video id="camera" autoplay playsinline muted></video>
+  <div id="camera-shade"></div>
+  <div class="topbar"><span class="live-dot"></span><span>STANDARD PRINTERS</span><span class="live-label" id="live-label">STARTING CAMERA…</span></div>
+  <section id="carousel" class="carousel" aria-label="Business card carousel">
+    <div class="slide-counter"><span id="current-number">01</span><span class="counter-line"></span><span>02</span></div>
+    <div class="slides-viewport">
+      <article class="slide active" data-slide="0">
+        <div class="card-head"><div class="logo small">SP</div><span class="eyebrow">PRINT SMART. SPEND LESS.</span></div>
+        <p class="slide-kicker">01 / BUSINESS & SERVICES</p>
+        <h2>STANDARD<br><span>PRINTERS</span></h2>
+        <div class="gold-rule"></div>
+        <p class="service-intro">Technology, printing and support for your business.</p>
+        <ul class="services">
+          <li>Printer cartridges & refilling</li><li>Printer repair, servicing & AMC</li>
+          <li>PC and laptop rental</li><li>Laptops, desktops & servers</li>
+        </ul>
+        <a class="website-cta" href="https://www.standardprinters.co.in/" target="_blank" rel="noopener">VISIT WEBSITE <span>↗</span></a>
+      </article>
+      <article class="slide" data-slide="1">
+        <div class="card-head"><div class="logo small">SP</div><span class="eyebrow">LET'S CONNECT</span></div>
+        <p class="slide-kicker">02 / CONTACT DETAILS</p>
+        <h2>LET'S TALK<br><span>BUSINESS.</span></h2>
+        <div class="gold-rule"></div>
+        <p class="contact-label">CALL US</p>
+        <a class="phone" href="tel:+918587002042">+91 85870 02042</a>
+        <a class="phone" href="tel:+919920098177">+91 99200 98177</a>
+        <p class="contact-label email-label">EMAIL</p>
+        <a class="email" href="mailto:sales@spinfo.in">sales@spinfo.in</a>
+        <a class="website-cta" href="https://www.standardprinters.co.in/" target="_blank" rel="noopener">STANDARDPRINTERS.CO.IN <span>↗</span></a>
+      </article>
+    </div>
+    <div class="carousel-controls">
+      <button id="prev" class="arrow" aria-label="Previous slide">←</button>
+      <div class="dots"><button class="dot active" data-to="0" aria-label="Slide 1"></button><button class="dot" data-to="1" aria-label="Slide 2"></button></div>
+      <span class="swipe-hint">SWIPE TO EXPLORE</span>
+      <button id="next" class="arrow" aria-label="Next slide">→</button>
+    </div>
+  </section>
+  <div id="permission-help" hidden>Camera access is blocked or unavailable. Allow camera access in your browser settings and reload this page. Use HTTPS.</div>
+  <button id="switch-camera" hidden>Switch camera</button>
+</main>
+<script src="app.js"></script>
+</body></html>
