@@ -1,26 +1,15 @@
-STANDARD PRINTERS — REFINED LIVE CAMERA CAROUSEL
-================================================
-Files:
-- index.html
-- style.css
-- app.js
-- qr_code_placeholder.png (placeholder only)
+SOLARVISION LIVE — Interactive solar product demo
 
-Fixes in this revision:
-- Carousel is visible immediately and does not depend on camera startup.
-- Explicit [hidden] CSS rule prevents hidden attributes being overridden by layout styles.
-- Automatic camera startup with rear-facing camera preference.
-- Clear camera status and recovery message if permission or HTTPS prevents camera access.
-- Retry Camera and Switch Camera controls.
-- Slide arrows, dots and swipe gestures.
-- Mobile-height layout refinements.
+FILES
+- index.html: complete responsive demo, camera view, SVG solar panel, animations and interactions.
 
-Slide 1: Standard Printers + service list.
-Slide 2: Contact numbers and email.
+RUN / HOST
+1. Upload index.html to an HTTPS host (GitHub Pages, Netlify, or your existing HTTPS website).
+2. Open the URL on a mobile phone and allow camera access.
+3. Optional: create a QR code pointing to the published HTTPS URL.
 
-IMPORTANT:
-1. Upload all files to HTTPS hosting. Camera access does not work from most plain HTTP URLs.
-2. Browsers cannot silently grant camera permission. A first-visit permission prompt may appear.
-3. The QR placeholder must be regenerated to point to the final hosted HTTPS page.
-4. This version shows a live camera video behind a transparent carousel, not spatially anchored WebXR AR.
-5. Service/contact copy should be checked against the current company website before printing.
+IMPORTANT
+- This is an AR-style live camera overlay, not surface-tracked WebXR AR. The product illustration and callouts float over the camera feed; they are not anchored to a physical roof or table.
+- Mobile browsers require HTTPS (or localhost) for camera access and explicit user permission. Some browsers may show a permission prompt; a website cannot silently bypass it.
+- Replace the illustrative SVG panel in index.html with your actual solar product render for a branded/product-accurate experience.
+- Energy copy is illustrative; do not present savings, output, or efficiency claims as verified product specifications.
